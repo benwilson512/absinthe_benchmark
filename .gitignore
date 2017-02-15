@@ -1,0 +1,61 @@
+# Created by https://www.gitignore.io/api/vim,elixir,erlang,phoenix
+### VPS keys
+/vpn
+
+### uploads
+/uploads
+/applications
+
+### optimizer
+/optimizer
+
+## Logs 
+/log
+
+### Vim ###
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+
+
+### Elixir ###
+/_build
+/cover
+/deps
+erl_crash.dump
+*.ez
+
+
+### Erlang ###
+.eunit
+deps
+*.o
+*.beam
+*.plt
+erl_crash.dump
+ebin
+rel/example_project
+.concrete/DEV_MODE
+.rebar
+
+
+### Phoenix ###
+# Phoenix: a web framework for Elixir
+_build/
+/db
+/deps
+/*.ez
+node_modules/
+erl_crash.dump
+/priv/static/
+/config/prod.secret.exs
+/rel
+
+# edeliver releases
+.deliver/releases/
+
