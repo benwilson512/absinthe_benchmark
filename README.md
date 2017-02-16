@@ -1,6 +1,10 @@
 # AbsintheBenchmark
 
-**TODO: Add description**
+To run:
+```
+mix profile.fprof --callers=true --sort=own --details -e "AbsintheBenchmark.benchmark"
+mix profile.fprof --callers=true --sort=own --details -e "AbsintheBenchmark.relay_benchmark"
+```
 
 ## Installation
 
