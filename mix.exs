@@ -30,6 +30,7 @@ defmodule AbsintheBenchmark.Mixfile do
   defp deps do
    [
     #  {:absinthe, "~> 1.2"},
+    #  {:absinthe, path: "../absinthe", override: true},
      {:absinthe, github: "absinthe-graphql/absinthe", branch: "middleware", override: true},
      {:absinthe_plug, "~> 1.2.2"},
      {:absinthe_relay, "~> 1.2.0"},

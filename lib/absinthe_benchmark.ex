@@ -93,13 +93,13 @@ defmodule AbsintheBenchmark do
     {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
 
     inner_pipeline = [
-      # Phase.Document.Execution.BeforeResolution,
+      Phase.Document.Execution.BeforeResolution,
       {Phase.Document.Execution.Resolution, [root_value: @root_value]},
-      # Phase.Document.Execution.AfterResolution,
+      Phase.Document.Execution.AfterResolution,
     ]
 
     fun = fn ->
-      {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
+      {:ok, blueprint, _} = Absinthe.Pipeline.run(blueprint, inner_pipeline)
     end
 
     Mix.Tasks.Profile.Fprof.profile(fun, [])
@@ -116,13 +116,13 @@ defmodule AbsintheBenchmark do
     {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
 
     inner_pipeline = [
-      # Phase.Document.Execution.BeforeResolution,
+      Phase.Document.Execution.BeforeResolution,
       {Phase.Document.Execution.Resolution, [root_value: @root_value]},
-      # Phase.Document.Execution.AfterResolution,
+      Phase.Document.Execution.AfterResolution,
     ]
 
     fun = fn ->
-      {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
+      {:ok, blueprint, _} = Absinthe.Pipeline.run(blueprint, inner_pipeline)
     end
 
     Benchee.run(%{
