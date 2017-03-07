@@ -1,4 +1,4 @@
-%{"absinthe": {:git, "https://github.com/absinthe-graphql/absinthe.git", "bf38ecbbd7ddf26b4a9099eb1fc9a66fe15120e7", [branch: "middleware"]},
+%{"absinthe": {:hex, :absinthe, "1.2.6", "463075e09ce685e44537702363257926b94583b75e4365db640828181d733449", [:mix], []},
   "absinthe_plug": {:hex, :absinthe_plug, "1.2.2", "15955b1df751e2c84e7e8c0ce15fd543c1218b8d1973d73dfef7418ebf5c8d57", [:mix], [{:absinthe, "~> 1.2.5", [hex: :absinthe, optional: false]}, {:plug, "~> 1.2", [hex: :plug, optional: false]}]},
   "absinthe_relay": {:hex, :absinthe_relay, "1.2.0", "503141482874c8a430320cb867007d5cc99390cc40a8e24d065d994bf97dc5ad", [:mix], [{:absinthe, "~> 1.2.0", [hex: :absinthe, optional: false]}, {:ecto, "~> 1.0 or ~> 2.0", [hex: :ecto, optional: true]}]},
   "benchee": {:hex, :benchee, "0.6.0", "c2565506c621ee010e71d05f555e39a1b937e00810e284bc85463a4d4efc4b00", [:mix], [{:deep_merge, "~> 0.1", [hex: :deep_merge, optional: false]}]},

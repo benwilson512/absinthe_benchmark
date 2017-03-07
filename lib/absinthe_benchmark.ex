@@ -82,9 +82,51 @@ defmodule AbsintheBenchmark do
     Absinthe.run(@query_document, AbsintheBenchmark.Schema, root_value: @root_value)
   end
 
+  def profile do
+    alias Absinthe.Phase
+
+    pipeline =
+      AbsintheBenchmark.Schema
+      |> Absinthe.Pipeline.for_document(root_value: @root_value)
+      |> Absinthe.Pipeline.upto(Phase.Document.Complexity.Result)
+
+    {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
+
+    inner_pipeline = [
+      # Phase.Document.Execution.BeforeResolution,
+      {Phase.Document.Execution.Resolution, [root_value: @root_value]},
+      # Phase.Document.Execution.AfterResolution,
+    ]
+
+    fun = fn ->
+      {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
+    end
+
+    Mix.Tasks.Profile.Fprof.profile(fun, [])
+  end
+
   def benchmark do
+    alias Absinthe.Phase
+
+    pipeline =
+      AbsintheBenchmark.Schema
+      |> Absinthe.Pipeline.for_document(root_value: @root_value)
+      |> Absinthe.Pipeline.upto(Phase.Document.Complexity.Result)
+
+    {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
+
+    inner_pipeline = [
+      # Phase.Document.Execution.BeforeResolution,
+      {Phase.Document.Execution.Resolution, [root_value: @root_value]},
+      # Phase.Document.Execution.AfterResolution,
+    ]
+
+    fun = fn ->
+      {:ok, blueprint, _} = Absinthe.Pipeline.run(@query_document, pipeline)
+    end
+
     Benchee.run(%{
-      "stuff" => &run/0
+      "stuff" => fun
     })
   end
 end
