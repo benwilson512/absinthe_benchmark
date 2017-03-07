@@ -29,8 +29,8 @@ defmodule AbsintheBenchmark.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
    [
-     {:absinthe, "~> 1.2"},
-    #  {:absinthe, github: "absinthe-graphql/absinthe", branch: "middleware", override: true},
+    #  {:absinthe, "~> 1.2"},
+     {:absinthe, github: "absinthe-graphql/absinthe", branch: "middleware", override: true},
      {:absinthe_plug, "~> 1.2.2"},
      {:absinthe_relay, "~> 1.2.0"},
      {:poison, "~> 2.1.0"},
