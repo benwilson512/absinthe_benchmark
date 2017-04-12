@@ -2,7 +2,7 @@
 
 To run:
 ```
-mix profile.fprof -e "AbsintheBenchmark.run"
+mix run -e "AbsintheBenchmark.profile"
 ```
 
 ## Installation
