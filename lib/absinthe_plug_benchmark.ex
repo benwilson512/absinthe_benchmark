@@ -26,7 +26,7 @@ defmodule AbsinthePlugBenchmark do
       email: "user@example.com",
       password: "fhibuhadifqwefiashfgiuhqwef",
       shoe_size: 10,
-      friend_ids: [:rand.uniform(@num_users), :rand.uniform(@num_users)]
+      friend_ids: [:rand.uniform(@num_users - 1), :rand.uniform(@num_users - 1)]
     }
     end), &{"#{&1.id}", &1})
 
@@ -147,7 +147,7 @@ defmodule AbsinthePlugBenchmark do
   def profile do
     opts = Absinthe.Plug.init(schema: AbsintheBenchmark.RelaySchema)
 
-    size = 100
+    size = 800
 
     user_payload = user_request(size) |> Poison.encode!
     user_conn =
@@ -187,7 +187,7 @@ defmodule AbsinthePlugBenchmark do
   def benchmark do
     opts = Absinthe.Plug.init(schema: AbsintheBenchmark.RelaySchema)
 
-    size = 800
+    size = 100
 
     user_payload = user_request(size) |> Poison.encode!
     user_conn =
@@ -218,17 +218,21 @@ defmodule AbsinthePlugBenchmark do
       |> put_private(:absinthe, %{root_value: @root_value})
 
     Benchee.run(%{
-      "user_request" => fn ->
-        %{status: 200} = Absinthe.Plug.call(user_conn, opts)
-      end,
-      "user_fragment_request" => fn ->
-        %{status: 200} = Absinthe.Plug.call(user_fragment_conn, opts)
-      end,
+      #   "user_request" => fn ->
+      #     %{status: 200} = Absinthe.Plug.call(user_conn, opts)
+      #   end,
+      #   "user_fragment_request" => fn ->
+      #     %{status: 200} = Absinthe.Plug.call(user_fragment_conn, opts)
+      #   end,
       "node_one_field_request" => fn ->
-        %{status: 200} = Absinthe.Plug.call(node_one_field_conn, opts)
+        res = Absinthe.Plug.call(node_one_field_conn, opts)
+        #IO.inspect(res.resp_body)
+        %{status: 200} = res
       end,
       "node_all_fields_request" => fn ->
-        %{status: 200} = Absinthe.Plug.call(node_all_fields_conn, opts)
+        res = Absinthe.Plug.call(node_all_fields_conn, opts)
+        # IO.inspect(res.resp_body)
+        %{status: 200} = res
       end,
     })
   end
