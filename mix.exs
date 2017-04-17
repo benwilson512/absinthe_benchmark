@@ -29,9 +29,9 @@ defmodule AbsintheBenchmark.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
    [
-    #  {:absinthe, github: "absinthe-graphql/absinthe", branch: "v1.3", override: true},
-    #  {:absinthe_plug, github: "absinthe-graphql/absinthe_plug", branch: "v1.3", override: true},
-    #  {:absinthe_relay, github: "absinthe-graphql/absinthe_relay", branch: "v1.3", override: true},
+     # {:absinthe, github: "absinthe-graphql/absinthe", branch: "v1.3", override: true},
+     # {:absinthe_plug, github: "absinthe-graphql/absinthe_plug", override: true},
+     # {:absinthe_relay, github: "absinthe-graphql/absinthe_relay", override: true},
      {:absinthe, path: "../absinthe", override: true},
      {:absinthe_plug, path: "../absinthe_plug", override: true},
      {:absinthe_relay, path: "../absinthe_relay", override: true},
