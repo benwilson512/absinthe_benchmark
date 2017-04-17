@@ -1,6 +1,8 @@
-%{"absinthe": {:hex, :absinthe, "1.2.6", "463075e09ce685e44537702363257926b94583b75e4365db640828181d733449", [:mix], []},
-  "absinthe_plug": {:hex, :absinthe_plug, "1.2.2", "15955b1df751e2c84e7e8c0ce15fd543c1218b8d1973d73dfef7418ebf5c8d57", [:mix], [{:absinthe, "~> 1.2.5", [hex: :absinthe, optional: false]}, {:plug, "~> 1.2", [hex: :plug, optional: false]}]},
-  "absinthe_relay": {:hex, :absinthe_relay, "1.2.0", "503141482874c8a430320cb867007d5cc99390cc40a8e24d065d994bf97dc5ad", [:mix], [{:absinthe, "~> 1.2.0", [hex: :absinthe, optional: false]}, {:ecto, "~> 1.0 or ~> 2.0", [hex: :ecto, optional: true]}]},
-  "mime": {:hex, :mime, "1.0.1", "05c393850524767d13a53627df71beeebb016205eb43bfbd92d14d24ec7a1b51", [:mix], []},
-  "plug": {:hex, :plug, "1.3.0", "6e2b01afc5db3fd011ca4a16efd9cb424528c157c30a44a0186bcc92c7b2e8f3", [:mix], [{:cowboy, "~> 1.0.1 or ~> 1.1", [hex: :cowboy, optional: true]}, {:mime, "~> 1.0", [hex: :mime, optional: false]}]},
+%{"absinthe": {:git, "https://github.com/absinthe-graphql/absinthe.git", "6d3993f20ec986554749f063356693caacd42972", [branch: "v1.3"]},
+  "absinthe_plug": {:git, "https://github.com/absinthe-graphql/absinthe_plug.git", "78c2de78f9f5084aaca0677f8666b59d14ea269d", [branch: "v1.3"]},
+  "absinthe_relay": {:git, "https://github.com/absinthe-graphql/absinthe_relay.git", "a3047080b45a5e38d30a67cf3e020bd04cfe90c9", [branch: "v1.3"]},
+  "benchee": {:hex, :benchee, "0.6.0", "c2565506c621ee010e71d05f555e39a1b937e00810e284bc85463a4d4efc4b00", [:mix], [{:deep_merge, "~> 0.1", [hex: :deep_merge, optional: false]}]},
+  "deep_merge": {:hex, :deep_merge, "0.1.1", "c27866a7524a337b6a039eeb8dd4f17d458fd40fbbcb8c54661b71a22fffe846", [:mix], []},
+  "mime": {:hex, :mime, "1.1.0", "01c1d6f4083d8aa5c7b8c246ade95139620ef8effb009edde934e0ec3b28090a", [:mix], []},
+  "plug": {:hex, :plug, "1.3.4", "b4ef3a383f991bfa594552ded44934f2a9853407899d47ecc0481777fb1906f6", [:mix], [{:cowboy, "~> 1.0.1 or ~> 1.1", [hex: :cowboy, optional: true]}, {:mime, "~> 1.0", [hex: :mime, optional: false]}]},
   "poison": {:hex, :poison, "2.1.0", "f583218ced822675e484648fa26c933d621373f01c6c76bd00005d7bd4b82e27", [:mix], []}}

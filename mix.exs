@@ -29,10 +29,14 @@ defmodule AbsintheBenchmark.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
    [
-     {:absinthe, "~> 1.2.0"},
-     {:absinthe_plug, "~> 1.2.2"},
-     {:absinthe_relay, "~> 1.2.0"},
-     {:poison, "~> 2.1.0"}
+    #  {:absinthe, github: "absinthe-graphql/absinthe", branch: "v1.3", override: true},
+    #  {:absinthe_plug, github: "absinthe-graphql/absinthe_plug", branch: "v1.3", override: true},
+    #  {:absinthe_relay, github: "absinthe-graphql/absinthe_relay", branch: "v1.3", override: true},
+     {:absinthe, path: "../absinthe", override: true},
+     {:absinthe_plug, path: "../absinthe_plug", override: true},
+     {:absinthe_relay, path: "../absinthe_relay", override: true},
+     {:poison, "~> 2.1.0"},
+     {:benchee, ">= 0.0.0"},
    ]
   end
 end
