@@ -1,8 +1,12 @@
 # AbsintheBenchmark
 
-To run:
+To get average times using Benchee, run:
 ```
-mix run -e "AbsintheBenchmark.profile"
+mix run -e "AbsinthePlugBenchmark.benchmark"
+```
+To get a detailed breakdown of function call times using `Mix.Tasks.Profile.Fprof.profile(fun, [sort: "own"])`, run:
+```
+mix run -e "AbsinthePlugBenchmark.profile"
 ```
 
 ## Installation

@@ -26,7 +26,7 @@ defmodule AbsintheBenchmark.RelaySchema do
 
     node field do
       resolve fn
-        %{type: node_type, id: id}, %{root_value: users} ->
+        %{type: :user, id: id}, %{root_value: users} ->
           user = Map.get(users, id)
           {:ok, user}
         _, _ ->

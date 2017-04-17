@@ -1,8 +1,8 @@
 %{"absinthe": {:git, "https://github.com/absinthe-graphql/absinthe.git", "6d3993f20ec986554749f063356693caacd42972", [branch: "v1.3"]},
-  "absinthe_plug": {:git, "https://github.com/absinthe-graphql/absinthe_plug.git", "78c2de78f9f5084aaca0677f8666b59d14ea269d", [branch: "v1.3"]},
-  "absinthe_relay": {:git, "https://github.com/absinthe-graphql/absinthe_relay.git", "a3047080b45a5e38d30a67cf3e020bd04cfe90c9", [branch: "v1.3"]},
+  "absinthe_plug": {:git, "https://github.com/absinthe-graphql/absinthe_plug.git", "b928b0dafc961981515396ecf20c39e20ee6dce6", []},
+  "absinthe_relay": {:git, "https://github.com/absinthe-graphql/absinthe_relay.git", "ae636c5fb4639109c74c240297b1207db020b7f5", []},
   "benchee": {:hex, :benchee, "0.6.0", "c2565506c621ee010e71d05f555e39a1b937e00810e284bc85463a4d4efc4b00", [:mix], [{:deep_merge, "~> 0.1", [hex: :deep_merge, optional: false]}]},
   "deep_merge": {:hex, :deep_merge, "0.1.1", "c27866a7524a337b6a039eeb8dd4f17d458fd40fbbcb8c54661b71a22fffe846", [:mix], []},
   "mime": {:hex, :mime, "1.1.0", "01c1d6f4083d8aa5c7b8c246ade95139620ef8effb009edde934e0ec3b28090a", [:mix], []},
-  "plug": {:hex, :plug, "1.3.4", "b4ef3a383f991bfa594552ded44934f2a9853407899d47ecc0481777fb1906f6", [:mix], [{:cowboy, "~> 1.0.1 or ~> 1.1", [hex: :cowboy, optional: true]}, {:mime, "~> 1.0", [hex: :mime, optional: false]}]},
+  "plug": {:hex, :plug, "1.3.5", "7503bfcd7091df2a9761ef8cecea666d1f2cc454cbbaf0afa0b6e259203b7031", [:mix], [{:cowboy, "~> 1.0.1 or ~> 1.1", [hex: :cowboy, optional: true]}, {:mime, "~> 1.0", [hex: :mime, optional: false]}]},
   "poison": {:hex, :poison, "2.1.0", "f583218ced822675e484648fa26c933d621373f01c6c76bd00005d7bd4b82e27", [:mix], []}}
